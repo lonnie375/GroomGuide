@@ -10,16 +10,20 @@
         public double AmountPaid { get; set; }
         public double Tip { get; set; }
 
+        public Appointment()
+        {
+            // Default constructor
+        }
 
-        public Appointment(int id, DateTime time, int serviceid, int stylistid, string clientemail, double amountpaid, double tip) 
-        { 
-            Id = id;
+        public Appointment(DateTime time, int serviceId, int stylistId, string clientEmail, double amountPaid, double tip)
+        {
             Time = time;
-            ServiceId = serviceid;  
-            StylistId = stylistid;
-            ClientEmail = clientemail;
-            AmountPaid = amountpaid;
+            ServiceId = serviceId;
+            StylistId = stylistId;
+            ClientEmail = clientEmail;
+            AmountPaid = amountPaid;
             Tip = tip;
         }
     }
+
 }

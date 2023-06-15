@@ -9,6 +9,8 @@
         public List<Service> Services { get; set; }
         public List<Appointment> Appointments { get; set; }
 
+        public Stylist() { }    
+
         public Stylist(int id, string name, string address, string imageurl) 
         { 
             Id = id;
