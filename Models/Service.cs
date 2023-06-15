@@ -8,6 +8,7 @@
         public int DurationInMinutes { get; set; }
         public int StylistId { get; set; }
 
+        public Service() { }
 
         public Service(int id, string name, double price, int durationinminutes, int stylistid) 
         { 
