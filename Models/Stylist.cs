@@ -6,8 +6,8 @@
         public string Name { get; set; }
         public string Address { get; set; }
         public string ImageUrl { get; set; }
-        public List<Service> Services { get; set; }
-        public List<Appointment> Appointments { get; set; }
+        //public List<Service> Services { get; set; }
+        //public List<Appointment> Appointments { get; set; }
 
         public Stylist() { }    
 
@@ -17,8 +17,8 @@
             Name = name;
             Address = address;
             ImageUrl = imageurl;
-            Services = new List<Service>();
-            Appointments = new List<Appointment>();
+            //Services = new List<Service>();
+            //Appointments = new List<Appointment>();
         }
     }
 }
