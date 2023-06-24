@@ -26,6 +26,7 @@ namespace GroomGuide.Controllers
             return Ok();
         }
 
+<<<<<<< HEAD
         //Get All Appointments
         [HttpGet("GetStylistAppointments")]
         public IActionResult GetAllAppointmentsByStylist(int id)
@@ -39,6 +40,30 @@ namespace GroomGuide.Controllers
             return Ok(response);
         }
 
+=======
+        //Create Appointment
+        [HttpPost("CreateAppointment")]
+        public IActionResult CreateAppointment(Appointment appt)
+        {
+            _context.Appointments.Add(appt);
+            _context.SaveChanges();
+            return Ok();
+        }
+
+        //Get All Appointments
+        [HttpGet("GetStylistAppointments")]
+        public IActionResult GetAllAppointmentsByStylist(int id)
+        {
+            if (_context.Appointments == null)
+            {
+                return NotFound();
+            }
+
+            var response = _context.Appointments.Where(x => x.StylistId == id).ToList();
+            return Ok(response);
+        }
+
+>>>>>>> 0f9a323d5790ce3cd546a546700a250bcb85f516
         //Delete Appointment
         [HttpDelete("DeleteAppointment")]
         public IActionResult DeleteAppointment(int id)
