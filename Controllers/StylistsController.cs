@@ -72,5 +72,8 @@ namespace GroomGuide.Controllers
             return Ok();
             
         }
+
+
+        //I want to get all of the services the stylist offers.
     }
 }
