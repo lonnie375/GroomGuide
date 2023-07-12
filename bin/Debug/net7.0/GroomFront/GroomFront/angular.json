@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "GroomGuideFrontEnd": {
+    "GroomFront": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/groom-guide-front-end",
+            "outputPath": "dist/groom-front",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "GroomGuideFrontEnd:build:production"
+              "browserTarget": "GroomFront:build:production"
             },
             "development": {
-              "browserTarget": "GroomGuideFrontEnd:build:development"
+              "browserTarget": "GroomFront:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "GroomGuideFrontEnd:build"
+            "browserTarget": "GroomFront:build"
           }
         },
         "test": {
@@ -97,5 +97,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "6b45c256-b907-4379-a2b1-c33e216afdd0"
   }
 }

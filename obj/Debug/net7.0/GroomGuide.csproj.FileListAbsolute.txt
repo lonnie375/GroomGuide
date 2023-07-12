@@ -75,9 +75,9 @@ C:\Users\lonni\OneDrive\SoftwareDev\PersonalProjects\GroomGuide\obj\Debug\net7.0
 C:\Users\lonni\OneDrive\SoftwareDev\PersonalProjects\GroomGuide\obj\Debug\net7.0\GroomGuide.pdb
 C:\Users\lonni\OneDrive\SoftwareDev\PersonalProjects\GroomGuide\obj\Debug\net7.0\GroomGuide.genruntimeconfig.cache
 C:\Users\lonni\OneDrive\SoftwareDev\PersonalProjects\GroomGuide\obj\Debug\net7.0\ref\GroomGuide.dll
-C:\Users\lonni\OneDrive\SoftwareDev\PersonalProjects\GroomGuide\bin\Debug\net7.0\GroomGuideFrontEnd\angular.json
-C:\Users\lonni\OneDrive\SoftwareDev\PersonalProjects\GroomGuide\bin\Debug\net7.0\GroomGuideFrontEnd\package-lock.json
-C:\Users\lonni\OneDrive\SoftwareDev\PersonalProjects\GroomGuide\bin\Debug\net7.0\GroomGuideFrontEnd\package.json
-C:\Users\lonni\OneDrive\SoftwareDev\PersonalProjects\GroomGuide\bin\Debug\net7.0\GroomGuideFrontEnd\tsconfig.app.json
-C:\Users\lonni\OneDrive\SoftwareDev\PersonalProjects\GroomGuide\bin\Debug\net7.0\GroomGuideFrontEnd\tsconfig.json
-C:\Users\lonni\OneDrive\SoftwareDev\PersonalProjects\GroomGuide\bin\Debug\net7.0\GroomGuideFrontEnd\tsconfig.spec.json
+C:\Users\lonni\OneDrive\SoftwareDev\PersonalProjects\GroomGuide\bin\Debug\net7.0\GroomFront\GroomFront\angular.json
+C:\Users\lonni\OneDrive\SoftwareDev\PersonalProjects\GroomGuide\bin\Debug\net7.0\GroomFront\GroomFront\package-lock.json
+C:\Users\lonni\OneDrive\SoftwareDev\PersonalProjects\GroomGuide\bin\Debug\net7.0\GroomFront\GroomFront\package.json
+C:\Users\lonni\OneDrive\SoftwareDev\PersonalProjects\GroomGuide\bin\Debug\net7.0\GroomFront\GroomFront\tsconfig.app.json
+C:\Users\lonni\OneDrive\SoftwareDev\PersonalProjects\GroomGuide\bin\Debug\net7.0\GroomFront\GroomFront\tsconfig.json
+C:\Users\lonni\OneDrive\SoftwareDev\PersonalProjects\GroomGuide\bin\Debug\net7.0\GroomFront\GroomFront\tsconfig.spec.json
