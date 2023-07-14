@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LocalApiService } from 'src/app/Services/localapiservices.service';
 
 @Component({
   selector: 'app-stylists',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StylistsComponent implements OnInit {
 
-  constructor() { }
+stylists: any[] | undefined;
+
+  constructor(private localApiService: LocalApiService) { }
 
   ngOnInit(): void {
+
   }
+
+  getAllStylists(): void {
+    this.localApiService.getAllStylists().subscribe(
+      (response: any) => {
+        this.stylists = response; 
+      },
+      (error: any) => {
+        console.error('Error getting sytlists:', error); 
+      }
+    )
+  }
+
 
 }

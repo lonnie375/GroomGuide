@@ -1,5 +1,56 @@
 <!-- Search By Stylists -->
+<div class="flex justify-center h-20 mt-16">
+    <form action="search" class="text-center">
+      <input type="text" name="searchStylists" title="search" placeholder="Search by name..." class="px-4 py-2 border border-gray-300 rounded-md">
+    </form>
+  </div>
 
-
-
-<!-- Display Stylists -->
+  <!-- Display Stylists -->
+<div class="flex justify-center">
+    <div class="grid grid-cols-3 gap-4">
+      <!-- Loop over the 'stylists' array and display each stylist -->
+      <div *ngFor="let stylist of stylists" class="flex justify-center items-center bg-gray-200 p-4">
+        {{ stylist.name }}
+        {{ stylist.address}}
+      </div>
+    </div>
+  </div>
+  
+  <!-- Display Stylists -->
+  <div class="flex justify-center">
+    <div class="grid grid-cols-3 gap-4">
+      <!-- First Row -->
+      <div class="flex justify-center items-center bg-gray-200 p-4">
+        Item 1
+      </div>
+      <div class="flex justify-center items-center bg-gray-200 p-4">
+        Item 2
+      </div>
+      <div class="flex justify-center items-center bg-gray-200 p-4">
+        Item 3
+      </div>
+  
+      <!-- Second Row -->
+      <div class="flex justify-center items-center bg-gray-200 p-4">
+        Item 4
+      </div>
+      <div class="flex justify-center items-center bg-gray-200 p-4">
+        Item 5
+      </div>
+      <div class="flex justify-center items-center bg-gray-200 p-4">
+        Item 6
+      </div>
+  
+      <!-- Third Row -->
+      <div class="flex justify-center items-center bg-gray-200 p-4">
+        Item 7
+      </div>
+      <div class="flex justify-center items-center bg-gray-200 p-4">
+        Item 8
+      </div>
+      <div class="flex justify-center items-center bg-gray-200 p-4">
+        Item 9
+      </div>
+    </div>
+  </div>
+  
