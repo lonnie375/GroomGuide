@@ -9,12 +9,13 @@ import { LocalApiService } from '../../Services/localapiservices.service';
   styleUrls: ['./stylists.component.css']
 })
 export class StylistsComponent implements OnInit {
+  
   stylists: Stylists[] | undefined;
 
   constructor(private localApiService: LocalApiService) { }
 
   ngOnInit(): void {
-    this.getAllStylists();
+     this.getAllStylists();
   }
 
   getAllStylists(): void {
