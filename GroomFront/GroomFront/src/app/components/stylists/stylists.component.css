@@ -1,5 +1,5 @@
-.bold-border {
-    border-width: 2px;
+.hover\:border-teal-600:hover {
+    border-color: #4fd1c5; /* Replace with your desired teal color */
+    border-width: 4px; /* Increase border width for a thicker effect */
     border-style: solid;
-    font-weight: bold;
   }
