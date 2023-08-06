@@ -4,12 +4,28 @@
       <input type="text" name="searchStylists" title="search" placeholder="Search by name..." class="px-4 py-2 border border-gray-300 rounded-md">
     </form>
     <div class="flex justify-center">
-      <div class="grid grid-cols-3 gap-4 justify-center">
-        <div *ngFor="let stylist of stylists" class="flex justify-center items-center bg-gray-200 p-4">
-          {{ stylist.name }}
-          {{ stylist.address }}
+      <div class="w-3/4">
+        <div class="grid grid-cols-3 gap-4">
+          <div
+            *ngFor="let stylist of stylists"
+            class="flex bg-gray-200 relative hover:border-teal-500 border-2 border-gray-200 bold-border">
+            <div class="w-1/2">
+              <img [src]="stylist.imageUrl" alt="stylists" class="object-cover h-full w-full">
+            </div>
+            <div class="w-1/2 flex flex-col justify-center p-4">
+              <h3 class="text-lg font-semibold">{{ stylist.name }}</h3>
+              <p class="text-sm">{{ stylist.address }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    
+    
+    
+    
+    
+    
+        
   </div>
 </div>
