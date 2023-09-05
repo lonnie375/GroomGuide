@@ -1,29 +1,33 @@
 <div class="flex justify-center h-20 mt-16">
   <div class="form">
-    <form action="search" class="text-center">
-      <input type="text" name="searchStylists" title="search" placeholder="Search by name..." class="px-4 py-2 border border-gray-300 rounded-md">
+    <form (submit)="searchStylists()" class="text-center">
+      <input type="text" name="searchStylists" [(ngModel)]="searchTerm" title="search" placeholder="Search by name..." class="px-4 py-2 border border-gray-300 rounded-md">
+      <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md ml-2">Search</button>
     </form>
-    <div class="flex justify-center">
-      <div class="w-full sm:w-3/4">
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div
-            *ngFor="let stylist of stylists"
-            class="flex bg-gray-200 relative hover:border-teal-600 border border-gray-200">
-            <div class="w-1/2">
-              <img [src]="stylist.imageUrl" alt="stylists" class="object-cover h-full w-full">
-            </div>
-            <div class="w-1/2 flex flex-col justify-center p-4">
-              <h3 class="text-lg font-semibold">{{ stylist.name }}</h3>
-              <p class="text-sm">{{ stylist.address }}</p>
-            </div>
-          </div>
+  </div>
+</div>
+
+<div class="flex justify-center">
+  <div class="w-full sm:w-3/4">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div
+        *ngFor="let stylist of searchResults"
+        class="flex bg-gray-200 relative hover:border-teal-600 border border-gray-200">
+        <div class="w-1/2">
+          <img [src]="stylist.imageUrl" alt="stylists" class="object-cover h-full w-full">
+        </div>
+        <div class="w-1/2 flex flex-col justify-center p-4">
+          <h3 class="text-lg font-semibold">{{ stylist.name }}</h3>
+          <p class="text-sm">{{ stylist.address }}</p>
         </div>
       </div>
     </div>
-    
+  </div>
+</div>
+
     
     
 
         
-  </div>
-</div>
+
+
