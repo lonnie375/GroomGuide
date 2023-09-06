@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Stylists } from '../../Interfaces/stylists';
 import { LocalApiService } from '../../Services/localapiservices.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-stylists',
@@ -13,11 +14,13 @@ export class StylistsComponent implements OnInit {
   searchResults: Stylists[] | undefined;
   searchTerm: string = '';
 
-  constructor(private localApiService: LocalApiService) { }
+  constructor(private localApiService: LocalApiService, private router: Router) { }
 
   ngOnInit(): void {
     this.getAllStylists();
   }
+
+  
 
   getAllStylists(): void {
     this.localApiService.getAllStylists().subscribe(
@@ -40,5 +43,9 @@ export class StylistsComponent implements OnInit {
     } else {
       this.searchResults = this.stylists; // If search term is empty, show all stylists
     }
+  }
+
+  navigateToStylistDetail(stylistId: number): void {
+    this.router.navigate(['/stylist', stylistId]);
   }
 }

@@ -62,8 +62,6 @@ export class LocalApiService {
   }
 
 
-
-
   
   // Create Stylist
   createStylist(style: Stylists): Observable<any> {

@@ -9,7 +9,7 @@ import { PaymentComponent } from './components/payment/payment.component';
 
 const routes: Routes = [
   {path: '', component:StylistsComponent},
-  {path: 'services', component:ServicesComponent},
+  {path: 'stylist/:id', component: ServicesComponent},
   {path: 'appointment', component:AppointmentComponent},
   {path: 'summary', component:SummaryComponent}, 
   {path: 'confirmation', component:ConfirmationComponent},

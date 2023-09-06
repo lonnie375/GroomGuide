@@ -1,1 +1,22 @@
-<p>services works!</p>
+<div class="flex bg-gray-200 relative border border-gray-200">
+    <div class="w-1/2">
+      <img [src]="stylist?.imageUrl" alt="Stylist Image" class="object-cover h-full w-full">
+    </div>
+    <div class="w-1/2 flex flex-col justify-center p-4">
+      <h3 class="text-lg font-semibold">{{ stylist?.name }}</h3>
+      <!-- Display other stylist details here -->
+    </div>
+  </div>
+
+  <div
+  *ngFor="let service of services"
+  class="flex bg-gray-200 relative hover:border-teal-600 border border-gray-200">
+  <div class="w-1/2">
+    <!-- Stylist service image or icon (if applicable) -->
+  </div>
+  <div class="w-1/2 flex flex-col justify-center p-4">
+    <h3 class="text-lg font-semibold">{{ service.name }}</h3>
+    <p class="text-sm">{{ service.durationInMinutes }}</p>
+    <p class="text-sm">Price: {{ service.price }}</p>
+  </div>
+</div>
