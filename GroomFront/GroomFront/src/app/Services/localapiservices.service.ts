@@ -73,6 +73,12 @@ export class LocalApiService {
     return this.http.get(`${this.apiUrlStylists}/GetAllStylist`);
   }
 
+  // Get Stylists by Id 
+  getStylistById(id: number): Observable<any> 
+  {
+    return this.http.get(`${this.apiUrlStylists}/GetStylistById?id=${id}`); 
+  }
+
   // Delete Stylist
   deleteStylist(id: number): Observable<any> {
     return this.http.delete(`${this.apiUrlStylists}/DeleteStylist?id=${id}`);

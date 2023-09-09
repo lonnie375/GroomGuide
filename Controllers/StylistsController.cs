@@ -42,6 +42,19 @@ namespace GroomGuide.Controllers
             return Ok(response);    
         }
 
+        //Get Stylist By Id 
+        [HttpGet("GetStylistById")]
+        public IActionResult GetStylistById(int id) 
+        {
+             if (_context.Stylist == null)
+            {
+                return NotFound();
+            }
+
+            var stylist = _context.Stylist.Where(x => x.Id == id); 
+            return Ok(stylist);
+        }
+
         //Delete a Stylist 
         [HttpDelete("DeleteStylist")]
         public IActionResult DeleteStylist(int id)
