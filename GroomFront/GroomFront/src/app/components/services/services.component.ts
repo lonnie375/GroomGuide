@@ -10,7 +10,7 @@ import { LocalApiService } from '../../Services/localapiservices.service';
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent implements OnInit {
-  stylist: Stylists | undefined;
+  stylist: Stylists[] | undefined;
   services: Services[] | undefined;
 
   constructor(
@@ -22,6 +22,7 @@ export class ServicesComponent implements OnInit {
     this.route.params.subscribe(params => {
       const stylistId = +params['id']; // Get the stylist ID from the route parameter
       this.getStylistServices(stylistId);
+      this.getStylistById(stylistId);
     });
   }
 
@@ -36,4 +37,17 @@ export class ServicesComponent implements OnInit {
       }
     );
   }
+
+  getStylistById(stylistId: number): void  {
+    this.localApiService.getStylistById(stylistId).subscribe(
+      (response: Stylists[]) => {
+        this.stylist = response; 
+      }, 
+      (error: any) => {
+        console.error('Error getting stylist details:', error);
+      }
+    ); 
+  }
+
+
 }
