@@ -3,6 +3,10 @@ import { ActivatedRoute } from '@angular/router';
 import { Stylists } from '../../Interfaces/stylists';
 import { Services } from '../../Interfaces/services';
 import { LocalApiService } from '../../Services/localapiservices.service';
+import { ConfirmationComponent } from '../confirmation/confirmation.component';
+import { MatDialog } from '@angular/material/dialog'; // Import Angular's dialog if available
+
+
 
 @Component({
   selector: 'app-services',
@@ -12,10 +16,13 @@ import { LocalApiService } from '../../Services/localapiservices.service';
 export class ServicesComponent implements OnInit {
   stylist: Stylists[] | undefined;
   services: Services[] | undefined;
+  selected = false;
 
   constructor(
     private route: ActivatedRoute,
-    private localApiService: LocalApiService
+    private localApiService: LocalApiService, 
+    private dialog: MatDialog
+    
   ) { }
 
   ngOnInit(): void {
@@ -49,5 +56,15 @@ export class ServicesComponent implements OnInit {
     ); 
   }
 
+  // Method to open the confirmation dialog
+  showConfirmationDialog(selectedService: any) {
+    const dialogRef = this.dialog.open(ConfirmationComponent, {
+      data: { service: selectedService }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      // Handle dialog close if needed
+    });
+  }
 
 }

@@ -13,6 +13,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ServicesComponent } from './components/services/services.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,7 @@ import { ServicesComponent } from './components/services/services.component';
     BrowserModule,
     AppRoutingModule, 
     HttpClientModule, 
-    FormsModule
+    FormsModule, BrowserAnimationsModule, MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

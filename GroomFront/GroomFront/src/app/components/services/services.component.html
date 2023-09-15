@@ -13,13 +13,14 @@
     <!-- Services (Two Columns) -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
       <div *ngFor="let service of services" class="flex bg-gray-200 hover:border-teal-600 border border-gray-200 mb-4">
-        <div class="w-1/2">
-          <!-- Stylist service image or icon (if applicable) -->
-        </div>
+
         <div class="w-1/2 flex flex-col justify-center p-4">
           <h3 class="text-lg font-semibold">{{ service.name }}</h3>
-          <p class="text-sm">{{ service.durationInMinutes }}</p>
-          <p class="text-sm">Price: {{ service.price }}</p>
+          <p class="text-sm">Time: {{ service.durationInMinutes }} minutes</p>
+          <p class="text-sm">Price: ${{ service.price }}</p>
+
+      <!-- Add a button to trigger the confirmation dialog -->
+      <button (click)="showConfirmationDialog(service)">Book Now</button>
         </div>
       </div>
     </div>
