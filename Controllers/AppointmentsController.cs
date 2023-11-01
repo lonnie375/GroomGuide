@@ -76,7 +76,7 @@ namespace GroomGuide.Controllers
 
         //Get Appointment Availability 
         [HttpGet("AppointmentAvailability")]
-        public IActionResult GetAvailableAppointments(int stylistId, string serviceType, DateTime selectedDate)
+        public IActionResult GetAvailableAppointments(int stylistId, DateTime selectedDate)
         {
             // Calculate the starting time for available appointments (current time + 1 hour)
             DateTime startTime = DateTime.Now.AddHours(1);
