@@ -1,1 +1,18 @@
 <p>appointment works!</p>
+
+
+
+<!--Will be used to display the appointment details once it is made-->
+<div *ngFor="let appointment of app">
+   <p>{{appointment.time}}</p>
+   <p>{{appointment.serviceId}}</p>
+   <p>{{appointment.stylistId}}</p>
+   <p>{{appointment.clientEmail}}</p>
+   <p>{{appointment.amountPaid}}</p>
+   <p>{{appointment.tip}}</p>
+</div>
+
+
+<!--Allow the user to set an appointment date and time-->
+
+<!--Once the date and time are set the user should then be taken to the confirmation page-->
