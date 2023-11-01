@@ -17,12 +17,26 @@ export class AppointmentComponent implements OnInit {
   app: Appointments[] | undefined; //to store the appointments for the stylists
 
 
-  constructor(private route: ActivatedRoute,
-    private localApiService: LocalApiService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private localApiService: LocalApiService, 
+    ) { }
 
   ngOnInit(): void {
 
-    
+
   }
 
+  /*this should be used to gather the stylist information that we want to bring to this component to verify that the time slot isn't selected. 
+  this.localApiService.getAvailableAppointments(stylistId, selectedDate).subscribe(
+    (availableAppointments: Date[]) => {
+
+    }, 
+    (error) => {
+      
+    }
+  ){
+
+  }
+  */
 }

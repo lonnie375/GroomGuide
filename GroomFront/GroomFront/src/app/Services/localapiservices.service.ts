@@ -38,7 +38,14 @@ export class LocalApiService {
     return this.http.put(`${this.apiUrl}/EditAppointment?id=${id}`, appointment);
   }
 
-
+// View Appointment Availablility
+  getAvailableAppointments(stylistId: number,  selectedDate: Date): Observable<Date[]>{
+    const params = {
+      stylistId: stylistId.toString(), 
+      selectedDate: selectedDate.toISOString()
+    }; 
+    return this.http.get<Date[]>(this.apiUrl, { params: params});
+  }
 
   
   // Create Service
