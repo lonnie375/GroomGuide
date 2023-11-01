@@ -5,6 +5,7 @@ import { Services } from '../../Interfaces/services';
 import { LocalApiService } from '../../Services/localapiservices.service';
 import { ConfirmationComponent } from '../confirmation/confirmation.component';
 import { MatDialog } from '@angular/material/dialog'; // Import Angular's dialog if available
+import { AppointmentComponent } from '../appointment/appointment.component';
 
 
 
@@ -56,9 +57,9 @@ export class ServicesComponent implements OnInit {
     ); 
   }
 
-  // Method to open the confirmation dialog
+  // Method to open the appointment dialog
   showConfirmationDialog(selectedService: any) {
-    const dialogRef = this.dialog.open(ConfirmationComponent, {
+    const dialogRef = this.dialog.open(AppointmentComponent, {
       data: { service: selectedService }
     });
 

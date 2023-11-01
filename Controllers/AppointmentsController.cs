@@ -74,5 +74,31 @@ namespace GroomGuide.Controllers
             return Ok();
         }
 
+        //Get Appointment Availability 
+        [HttpGet("AppointmentAvailability")]
+        public IActionResult GetAvailableAppointments(int stylistId, DateTime selectedDate)
+        {
+            // Calculate the starting time for available appointments (current time + 1 hour)
+            DateTime startTime = DateTime.Now.AddHours(1);
+
+            // Define working hours
+            DateTime workStartTime = new DateTime(selectedDate.Year, selectedDate.Month, selectedDate.Day, 8, 0, 0);
+            DateTime workEndTime = new DateTime(selectedDate.Year, selectedDate.Month, selectedDate.Day, 17, 0, 0);
+
+            // Filter available time slots within working hours
+            List<DateTime> availableTimeSlots = new List<DateTime>();
+            while (startTime <= workEndTime)
+            {
+                if (startTime >= workStartTime)
+                {
+                    availableTimeSlots.Add(startTime);
+                }
+                startTime = startTime.AddMinutes(15); // 15-minute slots
+            }
+
+            return Ok(availableTimeSlots);
+        }
+
+
     }
 }
