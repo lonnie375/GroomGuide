@@ -38,6 +38,17 @@ export class LocalApiService {
     return this.http.put(`${this.apiUrl}/EditAppointment?id=${id}`, appointment);
   }
 
+  // Available Appointments
+  getAvailableAppointments(stylistId: number, serviceType: string, selectedDate: Date): Observable<Date[]> {
+    const params = {
+      stylistId: stylistId.toString(),
+      serviceType: serviceType,
+      selectedDate: selectedDate.toISOString()
+    };
+
+    return this.http.get<Date[]>(this.apiUrl, { params: params });
+  }
+
 
 
   

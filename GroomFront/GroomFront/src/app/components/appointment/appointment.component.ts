@@ -21,8 +21,17 @@ export class AppointmentComponent implements OnInit {
     private localApiService: LocalApiService) { }
 
   ngOnInit(): void {
-
-    
   }
+
+  /* Going to be used to remove the appointments the stylist has. 
+this.appointmentService.getAvailableAppointments(stylistId, serviceType, selectedDate).subscribe(
+  (availableAppointments: Date[]) => {
+    // Handle the available appointments data here
+  },
+  (error) => {
+    // Handle any errors
+  }
+);
+  */
 
 }
